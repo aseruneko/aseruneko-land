@@ -1,0 +1,3 @@
+- favicon.ico
+  - Resized from Free License
+  - https://www.freepik.com/free-psd/beautiful-cat-portrait-isolated_38310702.htm#query=cat%20png&position=2&from_view=keyword&track=ais

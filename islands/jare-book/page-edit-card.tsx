@@ -1,0 +1,113 @@
+import { Signal, useSignal } from "@preact/signals";
+import { JareBookRoom } from "../../src/jare-book/jare-book-room.ts";
+import { User } from "../../src/user/user.ts";
+import { JareBookBook } from "../../src/jare-book/jare-book-book.ts";
+import { Room } from "../../src/room/room.ts";
+
+export default function PageEditCard(
+  data: {
+    room: Signal<Room | undefined>;
+    user: Signal<User | undefined>;
+    bookRoom: Signal<JareBookRoom | undefined>;
+  },
+) {
+  const book: Signal<JareBookBook | undefined> = useSignal(undefined);
+  const pageSubmitted: Signal<boolean> = useSignal(false);
+  const content: Signal<string> = useSignal("");
+  const pageForTimer: Signal<number> = useSignal(-1);
+  const timer: Signal<number> = useSignal(-1);
+  data.bookRoom.subscribe((br) => {
+    if (br) {
+      book.value = data.user.value?.id
+        ? JareBookRoom.reconstruct(br).searchBook(data.user.value.id)
+        : undefined;
+      if (br.editingPageNum !== pageForTimer.value) {
+        if (pageForTimer.value == -1) {
+          setInterval(timerDecrease, 1000);
+        }
+        pageForTimer.value = br.editingPageNum ?? 0;
+        timer.value = br.limitMin * 60;
+      }
+    }
+  });
+  function timerDecrease() {
+    if (timer.value > 0) {
+      timer.value = timer.value - 1;
+    }
+  }
+  async function onClickSubmitButton() {
+    pageSubmitted.value = true;
+    const res = await fetch(
+      `/api/jare-book/jare-book-rooms/${data.bookRoom.value?.roomId}/edit-page`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId: data.user.value?.id,
+          pageNum: data.bookRoom.value?.editingPageNum,
+          content: content.value,
+        }),
+      },
+    );
+    const r = await res.json();
+    data.room.value = r.room;
+    data.bookRoom.value = r.bookRoom;
+  }
+  return (
+    <>
+      <div
+        class="card small-card"
+        style="width: 95vw; max-width: 640px;"
+      >
+        <h3>『{book.value?.title}』</h3>
+        {data.bookRoom.value?.editingPageNum &&
+            data.bookRoom.value?.editingPageNum >= 1
+          ? (
+            <>
+              <h3>{data.bookRoom.value?.editingPageNum ?? 0}ページ目</h3>
+              <div style="witdh: 100%; white-space: pre-wrap">
+                {book.value?.pages[data.bookRoom.value?.editingPageNum - 1]
+                  .content}
+              </div>
+            </>
+          )
+          : ""}
+      </div>
+      <div
+        class="card small-card"
+        style="width: 95vw; max-width: 640px;"
+      >
+        <h3>{(data.bookRoom.value?.editingPageNum ?? 0) + 1}ページ目</h3>
+        <textarea
+          class="w-full h-40"
+          onInput={(e: any) => {
+            content.value = e.target.value;
+          }}
+        >
+        </textarea>
+        <div>
+          残り時間: {Math.floor(timer.value / 60)}分{timer.value % 60}秒
+        </div>
+        <div class="flex gap-x-2 mt-2">
+          <button
+            class="primary-btn"
+            onClick={onClickSubmitButton}
+            placeholder="タイトルを入力"
+          >
+            提出
+          </button>
+          {pageSubmitted.value
+            ? (
+              <p style="color: #aaaaaa" class="pt-1">
+                提出しました！
+              </p>
+            )
+            : ""}
+        </div>
+        <p style="color: #aaaaaa" class="pt-1">
+          全員揃うまで再提出可能です
+        </p>
+      </div>
+    </>
+  );
+}
