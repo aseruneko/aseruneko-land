@@ -10,7 +10,7 @@ export default function Home() {
         <header>
           <h1 class="logo">aseruneko-land.</h1>
         </header>
-        <section>
+        <section class="centering">
           <div
             class="card"
             style="width: 95vw; max-width: 640px;"
