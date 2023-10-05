@@ -9,6 +9,7 @@ export class JareBookRoom {
     public pageNum: number,
     public limitMin: number,
     public isRandom: boolean,
+    public isPublished: boolean = true,
     public status: JareBookRoomStatus,
     public books: JareBookBook[],
     public editingPageNum?: number,
@@ -20,6 +21,7 @@ export class JareBookRoom {
       data.pageNum,
       data.limitMin,
       data.isRandom,
+      data.isPublished,
       data.status,
       data.books,
       data.editingPageNum,
@@ -30,6 +32,7 @@ export class JareBookRoom {
     pageNum: number,
     limitMin: number,
     isRandom: boolean,
+    isPublished: boolean,
   ): JareBookRoom {
     return new JareBookRoom(
       room.id,
@@ -37,6 +40,7 @@ export class JareBookRoom {
       pageNum,
       limitMin,
       isRandom,
+      isPublished,
       JareBookRoomStatus.Waiting,
       [],
     );

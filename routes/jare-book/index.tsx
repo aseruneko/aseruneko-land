@@ -14,6 +14,20 @@ export default function JareBook() {
         <section class="centering">
           <RoomCreateCard />
         </section>
+        <section class="centering">
+          <div
+            class="card"
+            style="width: 95vw; max-width: 480px;"
+          >
+            <h3>更新履歴</h3>
+            <dl>
+              <dt>v2.0.1 @2023-10-06</dt>
+              <dd>バグ修正、作品公開の制御</dd>
+              <dt>v2.0.0 @2023-10-06</dt>
+              <dd>完成</dd>
+            </dl>
+          </div>
+        </section>
         <footer>
           <a href="https://twitter.com/aseruneko">@aseruneko</a>
         </footer>

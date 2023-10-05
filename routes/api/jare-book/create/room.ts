@@ -11,6 +11,7 @@ interface RoomRequest {
   pageNum: number;
   limitMin: number;
   isRandom: boolean;
+  isPublished: boolean;
 }
 
 export const handler = async (
@@ -26,6 +27,7 @@ export const handler = async (
     request.pageNum,
     request.limitMin,
     request.isRandom,
+    request.isPublished,
   );
   await new UserRepository(kv).save(user);
   await new RoomRepository(kv).save(room);

@@ -125,10 +125,6 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
             style="width: 95vw; max-width: 416px;"
           >
             <dl>
-              <dt>ユーザ名</dt>
-              <dd>
-                {user.value?.name}
-              </dd>
               <dt>部屋ID</dt>
               <dd>
                 {bookRoom.value?.roomId}
@@ -145,6 +141,10 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
               <dd>
                 {bookRoom.value?.isRandom ? "TRUE" : "FALSE"}
               </dd>
+              <dt>作品の公開</dt>
+              <dd>
+                {bookRoom.value?.isPublished ? "公開する" : "公開しない"}
+              </dd>
               <dt>ステータス</dt>
               <dd>
                 {useComputed(() => {
@@ -157,6 +157,8 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
                       return `${
                         (bookRoom.value?.editingPageNum ?? 0) + 1
                       }ページ目を執筆中`;
+                    case "FINISHED":
+                      return "終了済";
                     default:
                       return "その他";
                   }

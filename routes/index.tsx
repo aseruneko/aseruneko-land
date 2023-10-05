@@ -11,8 +11,16 @@ export default function Home() {
           <h1 class="logo">aseruneko-land.</h1>
         </header>
         <section>
-          <div class="card">
-            hoge
+          <div
+            class="card"
+            style="width: 95vw; max-width: 640px;"
+          >
+            <dl>
+              <dt>
+                <a href="/jare-book">jare-book</a>
+              </dt>
+              <dd>リレー小説アプリ</dd>
+            </dl>
           </div>
         </section>
         <footer>

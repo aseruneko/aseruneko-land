@@ -7,6 +7,7 @@ export default function RoomCreateCard() {
       pageNum: 1,
       limitMin: 1,
       isRandom: false,
+      isPublished: true,
     },
   );
 
@@ -91,6 +92,18 @@ export default function RoomCreateCard() {
               checked={form.value.isRandom}
               onChange={(e: any) =>
                 form.value = { ...form.value, isRandom: e.target.checked }}
+            >
+            </input>
+          </dd>
+          <dt>作品を公開する</dt>
+          <dd>
+            <input
+              class="checkbox-input"
+              type="checkbox"
+              name="isPublished"
+              checked={form.value.isPublished}
+              onChange={(e: any) =>
+                form.value = { ...form.value, isPublished: e.target.checked }}
             >
             </input>
           </dd>

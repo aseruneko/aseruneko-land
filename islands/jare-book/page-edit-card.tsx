@@ -25,6 +25,8 @@ export default function PageEditCard(
         if (pageForTimer.value == -1) {
           setInterval(timerDecrease, 1000);
         }
+        const pageEditor: any = document.getElementById("page-editor");
+        if (pageEditor) pageEditor.value = "";
         pageForTimer.value = br.editingPageNum ?? 0;
         timer.value = br.limitMin * 60;
       }
@@ -79,6 +81,7 @@ export default function PageEditCard(
       >
         <h3>{(data.bookRoom.value?.editingPageNum ?? 0) + 1}ページ目</h3>
         <textarea
+          id="page-editor"
           class="w-full h-40"
           onInput={(e: any) => {
             content.value = e.target.value;
