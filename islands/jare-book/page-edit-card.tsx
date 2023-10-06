@@ -3,6 +3,7 @@ import { JareBookRoom } from "../../src/jare-book/jare-book-room.ts";
 import { User } from "../../src/user/user.ts";
 import { JareBookBook } from "../../src/jare-book/jare-book-book.ts";
 import { Room } from "../../src/room/room.ts";
+import PageViewCard from "./page-view-card.tsx";
 
 export default function PageEditCard(
   data: {
@@ -67,10 +68,11 @@ export default function PageEditCard(
           ? (
             <>
               <h3>{data.bookRoom.value?.editingPageNum ?? 0}ページ目</h3>
-              <div style="witdh: 100%; white-space: pre-wrap">
-                {book.value?.pages[data.bookRoom.value?.editingPageNum - 1]
+              <PageViewCard
+                content={book.value
+                  ?.pages[data.bookRoom.value?.editingPageNum - 1]
                   .content}
-              </div>
+              />
             </>
           )
           : ""}

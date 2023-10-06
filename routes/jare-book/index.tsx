@@ -21,6 +21,8 @@ export default function JareBook() {
           >
             <h3>更新履歴</h3>
             <dl>
+              <dt>v2.0.2</dt>
+              <dd>@2023-10-06 ルビ機能の搭載</dd>
               <dt>v2.0.1</dt>
               <dd>@2023-10-06 バグ修正、作品公開の制御</dd>
               <dt>v2.0.0</dt>

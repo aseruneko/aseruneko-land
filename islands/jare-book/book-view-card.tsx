@@ -1,7 +1,8 @@
 import { Signal } from "@preact/signals";
 import { JareBookRoom } from "../../src/jare-book/jare-book-room.ts";
+import PageViewCard from "./page-view-card.tsx";
 
-export default function PageViewCard(
+export default function BookViewCard(
   data: { bookRoom: Signal<JareBookRoom | undefined> },
 ) {
   return (
@@ -19,9 +20,7 @@ export default function PageViewCard(
               {book.pages.map((p) => {
                 return (
                   <>
-                    <div style="witdh: 100%; white-space: pre-wrap">
-                      {p.content}
-                    </div>
+                    <PageViewCard content={p.content} />
                     <p>----------------------------------------</p>
                   </>
                 );

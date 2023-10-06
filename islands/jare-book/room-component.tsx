@@ -4,9 +4,8 @@ import { User } from "../../src/user/user.ts";
 import { Head } from "$fresh/runtime.ts";
 import { Room } from "../../src/room/room.ts";
 import TitleCreateCard from "./title-create-card.tsx";
-import { useEffect } from "preact/hooks";
 import PageEditCard from "./page-edit-card.tsx";
-import PageViewCard from "./book-view-card.tsx";
+import BookViewCard from "./book-view-card.tsx";
 
 export default function JareBookRoomComponent(data: { roomId: string }) {
   const room: Signal<Room | undefined> = useSignal(undefined);
@@ -210,7 +209,7 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
             ? <PageEditCard room={room} user={user} bookRoom={bookRoom} />
             : ""}
           {bookRoom.value?.status === "FINISHED"
-            ? <PageViewCard bookRoom={bookRoom} />
+            ? <BookViewCard bookRoom={bookRoom} />
             : ""}
         </section>
       </div>
