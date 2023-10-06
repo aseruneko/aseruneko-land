@@ -12,9 +12,6 @@ export default function RoomCreateCard() {
   );
 
   async function onSubmit() {
-    console.log(
-      form.value,
-    );
     await fetch(`/api/jare-book/create/room`, {
       method: "POST",
       headers: {

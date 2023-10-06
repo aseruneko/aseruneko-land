@@ -5,52 +5,62 @@
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/api/delete-all.ts";
-import * as $3 from "./routes/api/jare-book/create/room.ts";
-import * as $4 from "./routes/api/jare-book/jare-book-rooms/[id].ts";
-import * as $5 from "./routes/api/jare-book/jare-book-rooms/[id]/edit-page.ts";
-import * as $6 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-id.ts";
-import * as $7 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.ts";
-import * as $8 from "./routes/api/jare-book/jare-book-rooms/[id]/start.ts";
-import * as $9 from "./routes/api/jare-book/jare-book-rooms/[id]/title.ts";
-import * as $10 from "./routes/api/list-all.ts";
-import * as $11 from "./routes/api/rooms/[id].ts";
-import * as $12 from "./routes/api/rooms/[id]/is-updated.ts";
-import * as $13 from "./routes/greet/[name].tsx";
-import * as $14 from "./routes/index.tsx";
-import * as $15 from "./routes/jare-book/index.tsx";
-import * as $16 from "./routes/jare-book/rooms/[id].tsx";
-import * as $$0 from "./islands/jare-book/book-view-card.tsx";
-import * as $$1 from "./islands/jare-book/page-edit-card.tsx";
-import * as $$2 from "./islands/jare-book/room-component.tsx";
-import * as $$3 from "./islands/jare-book/room-create-card.tsx";
-import * as $$4 from "./islands/jare-book/title-create-card.tsx";
+import * as $3 from "./routes/api/jare-book/books.ts";
+import * as $4 from "./routes/api/jare-book/create/room.ts";
+import * as $5 from "./routes/api/jare-book/jare-book-rooms/[id].ts";
+import * as $6 from "./routes/api/jare-book/jare-book-rooms/[id]/edit-page.ts";
+import * as $7 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-id.ts";
+import * as $8 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.ts";
+import * as $9 from "./routes/api/jare-book/jare-book-rooms/[id]/start.ts";
+import * as $10 from "./routes/api/jare-book/jare-book-rooms/[id]/title.ts";
+import * as $11 from "./routes/api/list-all.ts";
+import * as $12 from "./routes/api/rooms/[id].ts";
+import * as $13 from "./routes/api/rooms/[id]/is-updated.ts";
+import * as $14 from "./routes/greet/[name].tsx";
+import * as $15 from "./routes/index.tsx";
+import * as $16 from "./routes/jare-book/index.tsx";
+import * as $17 from "./routes/jare-book/rooms/[id].tsx";
+import * as $18 from "./routes/jare-book/rooms/index.tsx";
+import * as $$0 from "./islands/jare-book/all-books-view-card.tsx";
+import * as $$1 from "./islands/jare-book/book-view-card.tsx";
+import * as $$2 from "./islands/jare-book/books-view-card.tsx";
+import * as $$3 from "./islands/jare-book/page-edit-card.tsx";
+import * as $$4 from "./islands/jare-book/page-view-card.tsx";
+import * as $$5 from "./islands/jare-book/room-component.tsx";
+import * as $$6 from "./islands/jare-book/room-create-card.tsx";
+import * as $$7 from "./islands/jare-book/title-create-card.tsx";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
     "./routes/_app.tsx": $1,
     "./routes/api/delete-all.ts": $2,
-    "./routes/api/jare-book/create/room.ts": $3,
-    "./routes/api/jare-book/jare-book-rooms/[id].ts": $4,
-    "./routes/api/jare-book/jare-book-rooms/[id]/edit-page.ts": $5,
-    "./routes/api/jare-book/jare-book-rooms/[id]/join-by-id.ts": $6,
-    "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.ts": $7,
-    "./routes/api/jare-book/jare-book-rooms/[id]/start.ts": $8,
-    "./routes/api/jare-book/jare-book-rooms/[id]/title.ts": $9,
-    "./routes/api/list-all.ts": $10,
-    "./routes/api/rooms/[id].ts": $11,
-    "./routes/api/rooms/[id]/is-updated.ts": $12,
-    "./routes/greet/[name].tsx": $13,
-    "./routes/index.tsx": $14,
-    "./routes/jare-book/index.tsx": $15,
-    "./routes/jare-book/rooms/[id].tsx": $16,
+    "./routes/api/jare-book/books.ts": $3,
+    "./routes/api/jare-book/create/room.ts": $4,
+    "./routes/api/jare-book/jare-book-rooms/[id].ts": $5,
+    "./routes/api/jare-book/jare-book-rooms/[id]/edit-page.ts": $6,
+    "./routes/api/jare-book/jare-book-rooms/[id]/join-by-id.ts": $7,
+    "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.ts": $8,
+    "./routes/api/jare-book/jare-book-rooms/[id]/start.ts": $9,
+    "./routes/api/jare-book/jare-book-rooms/[id]/title.ts": $10,
+    "./routes/api/list-all.ts": $11,
+    "./routes/api/rooms/[id].ts": $12,
+    "./routes/api/rooms/[id]/is-updated.ts": $13,
+    "./routes/greet/[name].tsx": $14,
+    "./routes/index.tsx": $15,
+    "./routes/jare-book/index.tsx": $16,
+    "./routes/jare-book/rooms/[id].tsx": $17,
+    "./routes/jare-book/rooms/index.tsx": $18,
   },
   islands: {
-    "./islands/jare-book/book-view-card.tsx": $$0,
-    "./islands/jare-book/page-edit-card.tsx": $$1,
-    "./islands/jare-book/room-component.tsx": $$2,
-    "./islands/jare-book/room-create-card.tsx": $$3,
-    "./islands/jare-book/title-create-card.tsx": $$4,
+    "./islands/jare-book/all-books-view-card.tsx": $$0,
+    "./islands/jare-book/book-view-card.tsx": $$1,
+    "./islands/jare-book/books-view-card.tsx": $$2,
+    "./islands/jare-book/page-edit-card.tsx": $$3,
+    "./islands/jare-book/page-view-card.tsx": $$4,
+    "./islands/jare-book/room-component.tsx": $$5,
+    "./islands/jare-book/room-create-card.tsx": $$6,
+    "./islands/jare-book/title-create-card.tsx": $$7,
   },
   baseUrl: import.meta.url,
 };

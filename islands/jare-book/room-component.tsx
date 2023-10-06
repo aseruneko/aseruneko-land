@@ -12,6 +12,7 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
   const bookRoom: Signal<JareBookRoom | undefined> = useSignal(undefined);
   const user: Signal<User | undefined> = useSignal(undefined);
   const editingTitle: Signal<string> = useSignal("");
+  const copied: Signal<boolean> = useSignal(false);
   editingTitle.subscribe((title) => {
     if (title.length > 0) submitTitle();
   });
@@ -106,6 +107,10 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
     room.value = r.room;
     bookRoom.value = r.bookRoom;
   }
+  function copyURL() {
+    copied.value = true;
+    navigator.clipboard.writeText(location.href);
+  }
   window.onload = onLoad;
   return (
     <>
@@ -125,12 +130,19 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
         <section class="centering">
           <div
             class="card small-card"
-            style="width: 95vw; max-width: 416px;"
+            style="width: 95vw; max-width: 512px;"
           >
             <dl>
               <dt>部屋ID</dt>
               <dd>
                 {bookRoom.value?.roomId}
+                <div
+                  class="ml-1"
+                  style="color: #aaaaaa; cursor: pointer;"
+                  onClick={copyURL}
+                >
+                  {copied.value ? "[copied!]" : "[copy]"}
+                </div>
               </dd>
               <dt>ページ数</dt>
               <dd>

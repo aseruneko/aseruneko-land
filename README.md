@@ -17,7 +17,5 @@ This will watch the project directory and restart as necessary.
 
 ### TODO
 
-- ルビ機能の説明
-- 部屋URLコピー機能
 - 公開済み本一覧機能
 - ランダム単語機能

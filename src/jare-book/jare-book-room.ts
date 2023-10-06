@@ -12,6 +12,7 @@ export class JareBookRoom {
     public isPublished: boolean = true,
     public status: JareBookRoomStatus,
     public books: JareBookBook[],
+    public createdAt: Date,
     public editingPageNum?: number,
   ) {}
   static reconstruct(data: JareBookRoom) {
@@ -24,6 +25,7 @@ export class JareBookRoom {
       data.isPublished,
       data.status,
       data.books,
+      data.createdAt,
       data.editingPageNum,
     );
   }
@@ -43,6 +45,7 @@ export class JareBookRoom {
       isPublished,
       JareBookRoomStatus.Waiting,
       [],
+      new Date(),
     );
   }
   join(user: User) {
