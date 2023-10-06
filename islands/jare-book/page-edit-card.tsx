@@ -112,6 +112,39 @@ export default function PageEditCard(
         <p style="color: #aaaaaa" class="pt-1">
           全員揃うまで再提出可能です
         </p>
+        <div class="flex items-center">
+          青空文庫記法でルビを振ることができます
+          <div class="tooltip ml-1">
+            <span
+              class="material-symbols-outlined help-icon"
+              style="font-size: 14px"
+            >
+              help
+            </span>
+            <div
+              class="description"
+              style="width: 200px; left: -93px; top: -180px;"
+            >
+              <p>（例）</p>
+              <p class="mt-4">
+                とある超電磁砲《レールガン》が
+              </p>
+              <p>
+                →とある<ruby>
+                  超電磁砲<rt>レールガン</rt>
+                </ruby>が
+              </p>
+              <p class="mt-4">
+                ｜そう《・・》とは知らずに
+              </p>
+              <p class="pb-2">
+                →<ruby>
+                  そう<rt>・・</rt>
+                </ruby>とは知らずに
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

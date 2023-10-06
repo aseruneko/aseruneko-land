@@ -95,7 +95,24 @@ export default function RoomCreateCard() {
             >
             </input>
           </dd>
-          <dt>作品を公開する</dt>
+          <dt>
+            作品公開
+            <div class="tooltip ml-1">
+              <span
+                class="material-symbols-outlined help-icon"
+                style="font-size: 14px"
+              >
+                help
+              </span>
+              <div
+                class="description"
+                style="width: 160px; left: -73px; top: -70px;"
+              >
+                <p>チェックを付けた作品は</p>
+                <p>一覧に公開されます</p>
+              </div>
+            </div>
+          </dt>
           <dd>
             <input
               class="checkbox-input"

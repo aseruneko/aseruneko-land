@@ -110,3 +110,37 @@ table {
   color: #aaaaaa;
   cursor: not-allowed;
 }
+
+.help-icon {
+  cursor: default;
+}
+
+/* 以下のCSSはhttps://www.jungleocean.com/programming/190308tooltip-cssを参考 */
+.tooltip {
+  display: flex;
+  position: relative;
+}
+.description {
+  display: none;
+  position: absolute;
+  padding: 8px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 5px;
+  background: #333;
+}
+.description > p {
+  margin-bottom: 0;
+}
+.description:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: 15px solid transparent;
+  border-top: 15px solid #333;
+  margin-left: -15px;
+}
+.tooltip:hover .description {
+  display: inline-block;
+}
