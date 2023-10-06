@@ -26,6 +26,7 @@ export default function PageEditCard(
         if (pageForTimer.value == -1) {
           setInterval(timerDecrease, 1000);
         }
+        pageSubmitted.value = false;
         const pageEditor: any = document.getElementById("page-editor");
         if (pageEditor) pageEditor.value = "";
         pageForTimer.value = br.editingPageNum ?? 0;
