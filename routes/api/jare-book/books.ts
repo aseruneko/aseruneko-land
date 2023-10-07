@@ -18,7 +18,7 @@ export const handler = async (
   const rooms = data.map((d: any) => {
     return d.value as JareBookRoom;
   }).filter((bookRoom) => {
-    return bookRoom.isPublished;
+    return bookRoom.isPublished && bookRoom.status == "FINISHED";
   }).sort((a, b) => {
     const aTime = a.createdAt?.getTime() ?? 0;
     const bTime = b.createdAt?.getTime() ?? 0;
