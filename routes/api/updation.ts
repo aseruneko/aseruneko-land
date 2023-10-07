@@ -1,5 +1,5 @@
 import { HandlerContext } from "$fresh/server.ts";
-import { updations } from "../../dev.ts";
+import { updations } from "../../src/updations.ts";
 
 export const handler = async (
   _req: Request,
@@ -7,6 +7,7 @@ export const handler = async (
 ): Promise<Response> => {
   const body = await _req.json();
   if (!Object.keys(updations).includes(body.id)) {
+    Deno.env.set;
     updations[body.id] = body.updatedAt;
   }
   const updatedAt = updations[body.id];

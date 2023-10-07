@@ -1,7 +1,7 @@
 import { HandlerContext } from "$fresh/server.ts";
-import { updations } from "../../../../../dev.ts";
 import { JareBookRoomRepository } from "../../../../../src/jare-book/jare-book-room.ts";
 import { RoomRepository } from "../../../../../src/room/room.ts";
+import { updations } from "../../../../../src/updations.ts";
 
 interface EditPageRequest {
   userId: string;

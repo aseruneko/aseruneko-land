@@ -5,7 +5,4 @@ import config from "./fresh.config.ts";
 
 import "$std/dotenv/load.ts";
 
-type Updations = { [key: string]: string };
-export const updations: Updations = {};
-
-dev(import.meta.url, "./main.ts", config);
+await dev(import.meta.url, "./main.ts", config);
