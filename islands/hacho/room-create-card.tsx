@@ -1,8 +1,14 @@
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { Card } from "../../components/shared/Card.tsx";
+import { polling } from "../../src/polling.ts";
 
 export default function HachoRoomCreateCard() {
-  function onClickCreateButton() {
+  async function onClickCreateButton() {
+    const updation = await polling(`/api/updation`, {
+      id: "test",
+      updatedAt: new Date(),
+    });
+    console.log(updation);
   }
   return (
     <Card width={480}>
