@@ -14,13 +14,14 @@ import * as $8 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.ts
 import * as $9 from "./routes/api/jare-book/jare-book-rooms/[id]/start.ts";
 import * as $10 from "./routes/api/jare-book/jare-book-rooms/[id]/title.ts";
 import * as $11 from "./routes/api/list-all.ts";
-import * as $12 from "./routes/api/rooms/[id].ts";
-import * as $13 from "./routes/api/rooms/[id]/is-updated.ts";
-import * as $14 from "./routes/greet/[name].tsx";
-import * as $15 from "./routes/index.tsx";
-import * as $16 from "./routes/jare-book/index.tsx";
-import * as $17 from "./routes/jare-book/rooms/[id].tsx";
-import * as $18 from "./routes/jare-book/rooms/index.tsx";
+import * as $12 from "./routes/api/random-words.ts";
+import * as $13 from "./routes/api/rooms/[id].ts";
+import * as $14 from "./routes/api/rooms/[id]/is-updated.ts";
+import * as $15 from "./routes/greet/[name].tsx";
+import * as $16 from "./routes/index.tsx";
+import * as $17 from "./routes/jare-book/index.tsx";
+import * as $18 from "./routes/jare-book/rooms/[id].tsx";
+import * as $19 from "./routes/jare-book/rooms/index.tsx";
 import * as $$0 from "./islands/jare-book/all-books-view-card.tsx";
 import * as $$1 from "./islands/jare-book/book-view-card.tsx";
 import * as $$2 from "./islands/jare-book/books-view-card.tsx";
@@ -44,13 +45,14 @@ const manifest = {
     "./routes/api/jare-book/jare-book-rooms/[id]/start.ts": $9,
     "./routes/api/jare-book/jare-book-rooms/[id]/title.ts": $10,
     "./routes/api/list-all.ts": $11,
-    "./routes/api/rooms/[id].ts": $12,
-    "./routes/api/rooms/[id]/is-updated.ts": $13,
-    "./routes/greet/[name].tsx": $14,
-    "./routes/index.tsx": $15,
-    "./routes/jare-book/index.tsx": $16,
-    "./routes/jare-book/rooms/[id].tsx": $17,
-    "./routes/jare-book/rooms/index.tsx": $18,
+    "./routes/api/random-words.ts": $12,
+    "./routes/api/rooms/[id].ts": $13,
+    "./routes/api/rooms/[id]/is-updated.ts": $14,
+    "./routes/greet/[name].tsx": $15,
+    "./routes/index.tsx": $16,
+    "./routes/jare-book/index.tsx": $17,
+    "./routes/jare-book/rooms/[id].tsx": $18,
+    "./routes/jare-book/rooms/index.tsx": $19,
   },
   islands: {
     "./islands/jare-book/all-books-view-card.tsx": $$0,

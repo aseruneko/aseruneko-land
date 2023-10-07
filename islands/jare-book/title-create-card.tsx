@@ -42,6 +42,19 @@ export default function JareBookRoomComponent(
     data.editing.value = title.value ?? "";
     titleSubmitted.value = true;
   }
+  async function onClickRandomButton() {
+    const res = await fetch(
+      `/api/random-words?limit=4`,
+      {
+        method: "GET",
+      },
+    );
+    const r = await res.json();
+    firstWords[0].value = r[0];
+    firstWords[1].value = r[1];
+    firstWords[2].value = r[2];
+    firstWords[3].value = r[3];
+  }
   return (
     <div
       class="card small-card"
@@ -90,13 +103,21 @@ export default function JareBookRoomComponent(
       </div>
       {!firstWord.value
         ? (
-          <button
-            class="primary-btn"
-            disabled={firstButtonDisabled}
-            onClick={onClickFirstButton}
-          >
-            書いた
-          </button>
+          <div class="flex">
+            <button
+              class="primary-btn"
+              disabled={firstButtonDisabled}
+              onClick={onClickFirstButton}
+            >
+              書いた
+            </button>
+            <button
+              class="secondory-btn ml-2"
+              onClick={onClickRandomButton}
+            >
+              単語ガチャ
+            </button>
+          </div>
         )
         : ""}
       {firstWord.value

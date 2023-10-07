@@ -16,6 +16,3 @@ deno task start
 This will watch the project directory and restart as necessary.
 
 ### TODO
-
-- 公開済み本一覧機能
-- ランダム単語機能

@@ -111,6 +111,21 @@ table {
   cursor: not-allowed;
 }
 
+.secondory-btn {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: solid 1px #aaaaaa;
+  color: #000000;
+  font-weight: 400;
+  padding: 4px 8px 4px 8px;
+}
+
+.primary-btn:disabled {
+  background-color: #eeeeee;
+  color: #aaaaaa;
+  cursor: not-allowed;
+}
+
 .help-icon {
   cursor: default;
 }
