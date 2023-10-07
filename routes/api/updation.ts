@@ -10,7 +10,6 @@ export const handler = async (
     updations[body.id] = body.updatedAt;
   }
   const updatedAt = updations[body.id];
-  console.log(updations);
   while (updations[body.id] === updatedAt) {
     await new Promise((r) => setTimeout(r, 50));
   }

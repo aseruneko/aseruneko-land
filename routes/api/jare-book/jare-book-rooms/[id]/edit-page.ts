@@ -1,4 +1,5 @@
 import { HandlerContext } from "$fresh/server.ts";
+import { updations } from "../../../../../dev.ts";
 import { JareBookRoomRepository } from "../../../../../src/jare-book/jare-book-room.ts";
 import { RoomRepository } from "../../../../../src/room/room.ts";
 
@@ -17,8 +18,7 @@ export const handler = async (
   const room = await new RoomRepository(kv).findBy(_ctx.params.id);
   const bookRoom = await new JareBookRoomRepository(kv).findBy(_ctx.params.id);
   bookRoom.editPage(req.userId, req.pageNum, req.content);
-  room.update();
-  await new RoomRepository(kv).save(room);
+  updations[room.id] = new Date().toJSON();
   await new JareBookRoomRepository(kv).save(bookRoom);
   await kv.close();
   return Response.json({ room: room, bookRoom: bookRoom });

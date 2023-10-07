@@ -30,6 +30,8 @@ export default function JareBook() {
             <h3>更新履歴</h3>
             <dl>
               <dt>v2.0.4</dt>
+              <dd>@2023-10-07 更新検知の仕組みを改善</dd>
+              <dt>v2.0.4</dt>
               <dd>@2023-10-07 ランダム単語機能</dd>
               <dt>v2.0.3</dt>
               <dd>@2023-10-07 過去作品の閲覧、URLコピー機能</dd>

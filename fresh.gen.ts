@@ -16,14 +16,13 @@ import * as $10 from "./routes/api/jare-book/jare-book-rooms/[id]/title.ts";
 import * as $11 from "./routes/api/list-all.ts";
 import * as $12 from "./routes/api/random-words.ts";
 import * as $13 from "./routes/api/rooms/[id].ts";
-import * as $14 from "./routes/api/rooms/[id]/is-updated.ts";
-import * as $15 from "./routes/api/updation.ts";
-import * as $16 from "./routes/greet/[name].tsx";
-import * as $17 from "./routes/hacho/index.tsx";
-import * as $18 from "./routes/index.tsx";
-import * as $19 from "./routes/jare-book/index.tsx";
-import * as $20 from "./routes/jare-book/rooms/[id].tsx";
-import * as $21 from "./routes/jare-book/rooms/index.tsx";
+import * as $14 from "./routes/api/updation.ts";
+import * as $15 from "./routes/greet/[name].tsx";
+import * as $16 from "./routes/hacho/index.tsx";
+import * as $17 from "./routes/index.tsx";
+import * as $18 from "./routes/jare-book/index.tsx";
+import * as $19 from "./routes/jare-book/rooms/[id].tsx";
+import * as $20 from "./routes/jare-book/rooms/index.tsx";
 import * as $$0 from "./islands/hacho/room-create-card.tsx";
 import * as $$1 from "./islands/jare-book/all-books-view-card.tsx";
 import * as $$2 from "./islands/jare-book/book-view-card.tsx";
@@ -50,14 +49,13 @@ const manifest = {
     "./routes/api/list-all.ts": $11,
     "./routes/api/random-words.ts": $12,
     "./routes/api/rooms/[id].ts": $13,
-    "./routes/api/rooms/[id]/is-updated.ts": $14,
-    "./routes/api/updation.ts": $15,
-    "./routes/greet/[name].tsx": $16,
-    "./routes/hacho/index.tsx": $17,
-    "./routes/index.tsx": $18,
-    "./routes/jare-book/index.tsx": $19,
-    "./routes/jare-book/rooms/[id].tsx": $20,
-    "./routes/jare-book/rooms/index.tsx": $21,
+    "./routes/api/updation.ts": $14,
+    "./routes/greet/[name].tsx": $15,
+    "./routes/hacho/index.tsx": $16,
+    "./routes/index.tsx": $17,
+    "./routes/jare-book/index.tsx": $18,
+    "./routes/jare-book/rooms/[id].tsx": $19,
+    "./routes/jare-book/rooms/index.tsx": $20,
   },
   islands: {
     "./islands/hacho/room-create-card.tsx": $$0,

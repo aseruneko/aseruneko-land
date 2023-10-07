@@ -6,6 +6,7 @@ import { Room } from "../../src/room/room.ts";
 import TitleCreateCard from "./title-create-card.tsx";
 import PageEditCard from "./page-edit-card.tsx";
 import BookViewCard from "./book-view-card.tsx";
+import { polling } from "../../src/polling.ts";
 
 export default function JareBookRoomComponent(data: { roomId: string }) {
   const room: Signal<Room | undefined> = useSignal(undefined);
@@ -20,7 +21,7 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
     user.value = await verifyUser();
     room.value = await verifyRoom();
     bookRoom.value = await verifyBookRoom();
-    setInterval(checkUpdate, 10000);
+    checkUpdate();
   }
   async function verifyRoom(): Promise<Room> {
     const res = await fetch(`/api/rooms/${data.roomId}`);
@@ -63,18 +64,14 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
   }
   async function checkUpdate() {
     if (!(bookRoom.value?.status == "FINISHED")) {
-      const res = await fetch(
-        `/api/rooms/${data.roomId}/is-updated`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ updatedAt: room.value?.updatedAt.toString() }),
-        },
-      );
-      const updated = await res.json();
+      const updated = await polling(`/api/updation`, {
+        id: data.roomId,
+        updatedAt: new Date(),
+      });
       if (updated.isUpdated) {
         room.value = await verifyRoom();
         bookRoom.value = await verifyBookRoom();
+        checkUpdate();
       }
     }
   }
