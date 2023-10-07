@@ -23,7 +23,6 @@ import * as $17 from "./routes/index.tsx";
 import * as $18 from "./routes/jare-book/index.tsx";
 import * as $19 from "./routes/jare-book/rooms/[id].tsx";
 import * as $20 from "./routes/jare-book/rooms/index.tsx";
-import * as $21 from "./routes/ws/hello.ts";
 import * as $$0 from "./islands/hacho/room-create-card.tsx";
 import * as $$1 from "./islands/jare-book/all-books-view-card.tsx";
 import * as $$2 from "./islands/jare-book/book-view-card.tsx";
@@ -57,7 +56,6 @@ const manifest = {
     "./routes/jare-book/index.tsx": $18,
     "./routes/jare-book/rooms/[id].tsx": $19,
     "./routes/jare-book/rooms/index.tsx": $20,
-    "./routes/ws/hello.ts": $21,
   },
   islands: {
     "./islands/hacho/room-create-card.tsx": $$0,

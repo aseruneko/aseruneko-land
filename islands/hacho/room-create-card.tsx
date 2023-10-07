@@ -3,16 +3,6 @@ import { Card } from "../../components/shared/Card.tsx";
 
 export default function HachoRoomCreateCard() {
   function onClickCreateButton() {
-    console.log("button");
-    const socket = new WebSocket(`ws://${location.host}/ws/hello`);
-    socket.onopen = () => {
-      socket.send("ga");
-      return "a";
-    };
-    socket.onmessage = (ev) => {
-      console.log("ha");
-      console.log(ev);
-    };
   }
   return (
     <Card width={480}>
