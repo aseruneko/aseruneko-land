@@ -1,6 +1,7 @@
 import { Signal, useComputed } from "@preact/signals";
 import { useSignal } from "@preact/signals";
 import { computed } from "@preact/signals-core";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 
 export default function JareBookRoomComponent(
   data: { editing: Signal<string> },
@@ -66,6 +67,7 @@ export default function JareBookRoomComponent(
           type="text"
           class="text-input mb-1 mr-1"
           value={firstWords[0].value}
+          disabled={!IS_BROWSER}
           onInput={(e: any) => {
             firstWords[0].value = e.target.value;
           }}
@@ -75,6 +77,7 @@ export default function JareBookRoomComponent(
           type="text"
           class="text-input mb-1 mr-1"
           value={firstWords[1].value}
+          disabled={!IS_BROWSER}
           onInput={(e: any) => {
             firstWords[1].value = e.target.value;
           }}
@@ -86,6 +89,7 @@ export default function JareBookRoomComponent(
           type="text"
           class="text-input mb-1 mr-1"
           value={firstWords[2].value}
+          disabled={!IS_BROWSER}
           onInput={(e: any) => {
             firstWords[2].value = e.target.value;
           }}
@@ -95,6 +99,7 @@ export default function JareBookRoomComponent(
           type="text"
           class="text-input mb-1 mr-1"
           value={firstWords[3].value}
+          disabled={!IS_BROWSER}
           onInput={(e: any) => {
             firstWords[3].value = e.target.value;
           }}
@@ -106,13 +111,14 @@ export default function JareBookRoomComponent(
           <div class="flex">
             <button
               class="primary-btn"
-              disabled={firstButtonDisabled}
+              disabled={!IS_BROWSER || firstButtonDisabled}
               onClick={onClickFirstButton}
             >
               書いた
             </button>
             <button
               class="secondory-btn ml-2"
+              disabled={!IS_BROWSER}
               onClick={onClickRandomButton}
             >
               単語ガチャ
@@ -133,6 +139,7 @@ export default function JareBookRoomComponent(
                 type="text"
                 class="text-input mb-1 mr-1"
                 value={secondWords[0].value}
+                disabled={!IS_BROWSER}
                 onInput={(e: any) => {
                   secondWords[0].value = e.target.value;
                 }}
@@ -142,6 +149,7 @@ export default function JareBookRoomComponent(
                 type="text"
                 class="text-input mb-1 mr-1"
                 value={secondWords[1].value}
+                disabled={!IS_BROWSER}
                 onInput={(e: any) => {
                   secondWords[1].value = e.target.value;
                 }}
@@ -153,6 +161,7 @@ export default function JareBookRoomComponent(
                 type="text"
                 class="text-input mb-1 mr-1"
                 value={secondWords[2].value}
+                disabled={!IS_BROWSER}
                 onInput={(e: any) => {
                   secondWords[2].value = e.target.value;
                 }}
@@ -162,6 +171,7 @@ export default function JareBookRoomComponent(
                 type="text"
                 class="text-input mb-1 mr-1"
                 value={secondWords[3].value}
+                disabled={!IS_BROWSER}
                 onInput={(e: any) => {
                   secondWords[3].value = e.target.value;
                 }}
@@ -172,7 +182,7 @@ export default function JareBookRoomComponent(
               ? (
                 <button
                   class="primary-btn"
-                  disabled={secondButtonDisabled}
+                  disabled={!IS_BROWSER || secondButtonDisabled}
                   onClick={onClickSecondButton}
                 >
                   書いた
@@ -196,6 +206,7 @@ export default function JareBookRoomComponent(
                 type="text"
                 class="text-input mb-1 mr-1"
                 value={title.value}
+                disabled={!IS_BROWSER}
                 onInput={(e: any) => {
                   title.value = e.target.value;
                 }}
@@ -205,7 +216,7 @@ export default function JareBookRoomComponent(
             <div class="flex gap-x-2">
               <button
                 class="primary-btn"
-                disabled={!title.value}
+                disabled={!IS_BROWSER || !title.value}
                 onClick={onClickTitleButton}
                 placeholder="タイトルを入力"
               >

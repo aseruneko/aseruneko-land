@@ -4,6 +4,7 @@ import { User } from "../../src/user/user.ts";
 import { JareBookBook } from "../../src/jare-book/jare-book-book.ts";
 import { Room } from "../../src/room/room.ts";
 import PageViewCard from "./page-view-card.tsx";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 
 export default function PageEditCard(
   data: {
@@ -86,6 +87,7 @@ export default function PageEditCard(
         <textarea
           id="page-editor"
           class="w-full h-40"
+          disabled={!IS_BROWSER}
           onInput={(e: any) => {
             content.value = e.target.value;
           }}
@@ -97,6 +99,7 @@ export default function PageEditCard(
         <div class="flex gap-x-2 mt-2">
           <button
             class="primary-btn"
+            disabled={!IS_BROWSER}
             onClick={onClickSubmitButton}
             placeholder="タイトルを入力"
           >

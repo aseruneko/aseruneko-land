@@ -37,6 +37,14 @@ export default function AllBooksViewCard() {
           })}
         </dl>
       </div>
+      <div class="centering">
+        <button
+          class="secondory-btn mt-1.5"
+          onClick={() => location.href = "/jare-book"}
+        >
+          戻る
+        </button>
+      </div>
     </>
   );
 }

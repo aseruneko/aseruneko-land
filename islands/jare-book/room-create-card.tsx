@@ -1,4 +1,5 @@
 import { useSignal } from "@preact/signals";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 
 export default function RoomCreateCard() {
   const form = useSignal(
@@ -41,6 +42,7 @@ export default function RoomCreateCard() {
               name="userName"
               placeholder="ユーザ名を入力"
               value={form.value.userName}
+              disabled={!IS_BROWSER}
               onChange={(e: any) =>
                 form.value = { ...form.value, userName: e.target.value }}
             >
@@ -55,6 +57,7 @@ export default function RoomCreateCard() {
               min="1"
               max="32"
               value={form.value.pageNum}
+              disabled={!IS_BROWSER}
               onChange={(e: any) =>
                 form.value = {
                   ...form.value,
@@ -72,6 +75,7 @@ export default function RoomCreateCard() {
               min="1"
               max="32"
               value={form.value.limitMin}
+              disabled={!IS_BROWSER}
               onChange={(e: any) =>
                 form.value = {
                   ...form.value,
@@ -87,6 +91,7 @@ export default function RoomCreateCard() {
               type="checkbox"
               name="isRandom"
               checked={form.value.isRandom}
+              disabled={!IS_BROWSER}
               onChange={(e: any) =>
                 form.value = { ...form.value, isRandom: e.target.checked }}
             >
@@ -116,6 +121,7 @@ export default function RoomCreateCard() {
               type="checkbox"
               name="isPublished"
               checked={form.value.isPublished}
+              disabled={!IS_BROWSER}
               onChange={(e: any) =>
                 form.value = { ...form.value, isPublished: e.target.checked }}
             >
@@ -127,6 +133,7 @@ export default function RoomCreateCard() {
         <button
           class="primary-btn"
           style="margin-top: 8px"
+          disabled={!IS_BROWSER}
           onClick={onSubmit}
         >
           部屋を作る

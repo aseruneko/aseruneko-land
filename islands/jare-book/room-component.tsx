@@ -1,7 +1,7 @@
 import { Signal, useComputed, useSignal } from "@preact/signals";
 import { JareBookRoom } from "../../src/jare-book/jare-book-room.ts";
 import { User } from "../../src/user/user.ts";
-import { Head } from "$fresh/runtime.ts";
+import { Head, IS_BROWSER } from "$fresh/runtime.ts";
 import { Room } from "../../src/room/room.ts";
 import TitleCreateCard from "./title-create-card.tsx";
 import PageEditCard from "./page-edit-card.tsx";
@@ -71,6 +71,8 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
       if (updated.isUpdated) {
         room.value = await verifyRoom();
         bookRoom.value = await verifyBookRoom();
+        checkUpdate();
+      } else {
         checkUpdate();
       }
     }
@@ -207,7 +209,11 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
               ) {
                 return (
                   <div class="centering" style="margin-top: 8px">
-                    <button class="primary-btn" onClick={onClickStart}>
+                    <button
+                      class="primary-btn"
+                      disabled={!IS_BROWSER}
+                      onClick={onClickStart}
+                    >
                       開始
                     </button>
                   </div>
@@ -222,7 +228,19 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
             ? <PageEditCard room={room} user={user} bookRoom={bookRoom} />
             : ""}
           {bookRoom.value?.status === "FINISHED"
-            ? <BookViewCard bookRoom={bookRoom} />
+            ? (
+              <>
+                <BookViewCard bookRoom={bookRoom} />
+                <div class="centering">
+                  <button
+                    class="secondory-btn mt-1.5"
+                    onClick={() => location.href = "/jare-book"}
+                  >
+                    戻る
+                  </button>
+                </div>
+              </>
+            )
             : ""}
         </section>
       </div>

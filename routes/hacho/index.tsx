@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { Card } from "../../components/shared/Card.tsx";
-import HachoRoomCreateCard from "../../islands/hacho/room-create-card.tsx";
+import HachoRoomCreateCard from "../../islands/hacho/hacho-room-create-card.tsx";
 
 export default function HachoIndexPage() {
   return (
