@@ -33,11 +33,12 @@ import * as $$1 from "./islands/hacho/hacho-room-create-card.tsx";
 import * as $$2 from "./islands/jare-book/all-books-view-card.tsx";
 import * as $$3 from "./islands/jare-book/book-view-card.tsx";
 import * as $$4 from "./islands/jare-book/books-view-card.tsx";
-import * as $$5 from "./islands/jare-book/page-edit-card.tsx";
-import * as $$6 from "./islands/jare-book/page-view-card.tsx";
-import * as $$7 from "./islands/jare-book/room-component.tsx";
-import * as $$8 from "./islands/jare-book/room-create-card.tsx";
-import * as $$9 from "./islands/jare-book/title-create-card.tsx";
+import * as $$5 from "./islands/jare-book/name-change-card.tsx";
+import * as $$6 from "./islands/jare-book/page-edit-card.tsx";
+import * as $$7 from "./islands/jare-book/page-view-card.tsx";
+import * as $$8 from "./islands/jare-book/room-component.tsx";
+import * as $$9 from "./islands/jare-book/room-create-card.tsx";
+import * as $$10 from "./islands/jare-book/title-create-card.tsx";
 
 const manifest = {
   routes: {
@@ -74,11 +75,12 @@ const manifest = {
     "./islands/jare-book/all-books-view-card.tsx": $$2,
     "./islands/jare-book/book-view-card.tsx": $$3,
     "./islands/jare-book/books-view-card.tsx": $$4,
-    "./islands/jare-book/page-edit-card.tsx": $$5,
-    "./islands/jare-book/page-view-card.tsx": $$6,
-    "./islands/jare-book/room-component.tsx": $$7,
-    "./islands/jare-book/room-create-card.tsx": $$8,
-    "./islands/jare-book/title-create-card.tsx": $$9,
+    "./islands/jare-book/name-change-card.tsx": $$5,
+    "./islands/jare-book/page-edit-card.tsx": $$6,
+    "./islands/jare-book/page-view-card.tsx": $$7,
+    "./islands/jare-book/room-component.tsx": $$8,
+    "./islands/jare-book/room-create-card.tsx": $$9,
+    "./islands/jare-book/title-create-card.tsx": $$10,
   },
   baseUrl: import.meta.url,
 };

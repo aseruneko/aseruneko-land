@@ -1,5 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import BooksViewCard from "../../islands/jare-book/books-view-card.tsx";
+import NameChangeCard from "../../islands/jare-book/name-change-card.tsx";
 import RoomCreateCard from "../../islands/jare-book/room-create-card.tsx";
 
 export default function JareBook() {
@@ -23,12 +24,17 @@ export default function JareBook() {
           <BooksViewCard />
         </section>
         <section class="centering">
+          <NameChangeCard />
+        </section>
+        <section class="centering">
           <div
             class="card"
             style="width: 95vw; max-width: 480px;"
           >
             <h3>更新履歴</h3>
             <dl>
+              <dt>v2.0.7</dt>
+              <dd>@2023-10-07 保存された名前を変更できる</dd>
               <dt>v2.0.6</dt>
               <dd>
                 @2023-10-09
