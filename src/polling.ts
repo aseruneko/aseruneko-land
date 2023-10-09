@@ -9,7 +9,8 @@ export async function polling(url: string, params: object) {
   ).then((res) => {
     return res;
   }, async () => {
-    return await polling(url, params);
+    const res = await polling(url, params);
+    return res;
   });
   return await response.json();
 }
