@@ -29,6 +29,6 @@ export default function HachoRoomComponent(props: HachoRoomComponentProps) {
     userName.value = window.localStorage.getItem("hacho-userName") ?? undefined;
     password.value = window.localStorage.getItem("hacho-password") ?? undefined;
   }
-  window.onload = onLoad;
+  self.addEventListener("load", onLoad);
   return <>{isMember.value ? <div>{props.id}</div> : <p>notMember</p>}</>;
 }

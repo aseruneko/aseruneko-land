@@ -10,7 +10,7 @@ export default function BooksViewCard() {
     const rs = await res.json();
     bookRooms.value = rs;
   }
-  window.onload = onLoad;
+  self.addEventListener("load", onLoad);
   return (
     <>
       <div

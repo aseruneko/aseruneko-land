@@ -110,7 +110,7 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
     copied.value = true;
     navigator.clipboard.writeText(location.href);
   }
-  window.onload = onLoad;
+  self.addEventListener("load", onLoad);
   return (
     <>
       <Head>

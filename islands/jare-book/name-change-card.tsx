@@ -9,9 +9,9 @@ export default function NameChangeCard() {
     userName.value = window.localStorage.getItem("userName") ?? undefined;
     newName.value = "";
   }
-  window.onload = () => {
+  self.addEventListener("load", () => {
     userName.value = window.localStorage.getItem("userName") ?? undefined;
-  };
+  });
   return (
     <>
       <div

@@ -8,8 +8,8 @@ export async function polling(url: string, params: object) {
     },
   ).then((res) => {
     return res;
-  }, () => {
-    return polling(url, params);
+  }, async () => {
+    return await polling(url, params);
   });
   return await response.json();
 }

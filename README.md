@@ -17,6 +17,4 @@ This will watch the project directory and restart as necessary.
 
 ### TODO
 
-disabledをisBrowserにする（名前を入れると戻ってしまう）
-同期が長いこと（3.5分でリクエストタイムアウト）するとできない
-最後のページにホームに戻るボタンがほしい
+onLoadをaddEventListenerに変える やっぱりtimeoutする
