@@ -71,10 +71,8 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
       if (updated.isUpdated) {
         room.value = await verifyRoom();
         bookRoom.value = await verifyBookRoom();
-        checkUpdate();
-      } else {
-        checkUpdate();
       }
+      await checkUpdate();
     }
   }
   async function onClickStart() {
