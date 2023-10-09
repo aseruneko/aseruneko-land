@@ -6,11 +6,12 @@ export async function polling(url: string, params: object) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...params }),
     },
-  ).then((res) => {
-    return res;
+  ).then(async (res) => {
+    return await res.json().catch(() => {
+      return polling(url, params);
+    });
   }, async () => {
-    const res = await polling(url, params);
-    return res;
+    return await polling(url, params);
   });
-  return await response.json();
+  return response;
 }
