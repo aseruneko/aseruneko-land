@@ -1,5 +1,6 @@
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { Signal, useSignal } from "@preact/signals";
+import { useEffect } from "preact/hooks";
 
 export default function NameChangeCard() {
   const userName: Signal<string | undefined> = useSignal(undefined);
@@ -9,9 +10,9 @@ export default function NameChangeCard() {
     userName.value = window.localStorage.getItem("userName") ?? undefined;
     newName.value = "";
   }
-  self.addEventListener("load", () => {
+  useEffect(() => {
     userName.value = window.localStorage.getItem("userName") ?? undefined;
-  });
+  }, []);
   return (
     <>
       <div

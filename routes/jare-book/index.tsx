@@ -33,6 +33,8 @@ export default function JareBook() {
           >
             <h3>更新履歴</h3>
             <dl>
+              <dt>v2.0.8</dt>
+              <dd>@2023-10-14 ブラウザによる初期読込失敗問題改善</dd>
               <dt>v2.0.7</dt>
               <dd>@2023-10-09 保存された名前を変更できる</dd>
               <dt>v2.0.6</dt>

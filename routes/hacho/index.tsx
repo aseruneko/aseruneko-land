@@ -38,6 +38,10 @@ font-family: 'Roboto Mono', monospace;"
         <Card width={480}>
           <h2>更新履歴</h2>
           <dl class="flex flex-wrap py-1.5">
+            <dt class="w-1/4">v1.0.1</dt>
+            <dd class="w-3/4">
+              @2023-10-14 ブラウザによる初期読込失敗問題改善
+            </dd>
             <dt class="w-1/4">v1.0.0</dt>
             <dd class="w-3/4">@2023-10-14 完成</dd>
           </dl>

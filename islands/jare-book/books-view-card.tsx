@@ -1,5 +1,6 @@
 import { Signal, useSignal } from "@preact/signals";
 import { JareBookRoom } from "../../src/jare-book/jare-book-room.ts";
+import { useEffect } from "preact/hooks";
 
 export default function BooksViewCard() {
   const bookRooms: Signal<JareBookRoom[]> = useSignal([]);
@@ -10,7 +11,9 @@ export default function BooksViewCard() {
     const rs = await res.json();
     bookRooms.value = rs;
   }
-  self.addEventListener("load", onLoad);
+  useEffect(() => {
+    onLoad();
+  }, []);
   return (
     <>
       <div

@@ -7,6 +7,7 @@ import TitleCreateCard from "./title-create-card.tsx";
 import PageEditCard from "./page-edit-card.tsx";
 import BookViewCard from "./book-view-card.tsx";
 import { polling } from "../../src/polling.ts";
+import { useEffect } from "preact/hooks";
 
 export default function JareBookRoomComponent(data: { roomId: string }) {
   const room: Signal<Room | undefined> = useSignal(undefined);
@@ -108,7 +109,9 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
     copied.value = true;
     navigator.clipboard.writeText(location.href);
   }
-  self.addEventListener("load", onLoad);
+  useEffect(() => {
+    onLoad();
+  }, []);
   return (
     <>
       <Head>
