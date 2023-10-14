@@ -20,6 +20,10 @@ export default function Home() {
                 <a href="/jare-book">jare-book</a>
               </dt>
               <dd>リレー小説アプリ</dd>
+              <dt>
+                <a href="/hacho">hacho</a>
+              </dt>
+              <dd>価値観共有ゲーム</dd>
             </dl>
           </div>
         </section>
