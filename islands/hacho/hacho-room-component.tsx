@@ -49,10 +49,12 @@ export default function HachoRoomComponent(props: HachoRoomComponentProps) {
     userName.value = window.localStorage.getItem("hacho-userName") ?? undefined;
     password.value = window.localStorage.getItem("hacho-password") ?? undefined;
   }
-  self.addEventListener("load", onLoad);
+  addEventListener("load", onLoad);
   return (
     <>
-      {!isMember.value ? <HachoRoomJoinCard roomId={props.id} /> : ""}
+      {(hacho.value && !isMember.value)
+        ? <HachoRoomJoinCard roomId={props.id} />
+        : ""}
       {isMember.value
         ? (
           <>
