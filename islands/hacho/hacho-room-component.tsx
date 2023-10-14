@@ -7,6 +7,7 @@ import HachoRoomWaitingCard from "./hacho-room-waiting-card.tsx";
 import HachoRoomPlayCard from "./hacho-room-play-card.tsx";
 import HachoRoomInfoCard from "./hacho-room-info-card.tsx";
 import HachoRoomFinishedCard from "./hacho-room-finished-card.tsx";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 
 interface HachoRoomComponentProps {
   id: string;
@@ -49,7 +50,8 @@ export default function HachoRoomComponent(props: HachoRoomComponentProps) {
     userName.value = window.localStorage.getItem("hacho-userName") ?? undefined;
     password.value = window.localStorage.getItem("hacho-password") ?? undefined;
   }
-  self.addEventListener("load", onLoad);
+  if (IS_BROWSER) onLoad();
+
   return (
     <>
       {(hacho.value && !isMember.value)
