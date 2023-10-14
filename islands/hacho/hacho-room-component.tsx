@@ -8,6 +8,7 @@ import HachoRoomPlayCard from "./hacho-room-play-card.tsx";
 import HachoRoomInfoCard from "./hacho-room-info-card.tsx";
 import HachoRoomFinishedCard from "./hacho-room-finished-card.tsx";
 import { IS_BROWSER } from "$fresh/runtime.ts";
+import { useEffect } from "preact/hooks";
 
 interface HachoRoomComponentProps {
   id: string;
@@ -50,7 +51,9 @@ export default function HachoRoomComponent(props: HachoRoomComponentProps) {
     userName.value = window.localStorage.getItem("hacho-userName") ?? undefined;
     password.value = window.localStorage.getItem("hacho-password") ?? undefined;
   }
-  if (IS_BROWSER) onLoad();
+  useEffect(() => {
+    onLoad();
+  }, []);
 
   return (
     <>
