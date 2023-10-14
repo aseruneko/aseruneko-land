@@ -17,4 +17,4 @@ This will watch the project directory and restart as necessary.
 
 ### TODO
 
-onLoadをaddEventListenerに変える やっぱりtimeoutする
+hacho作るところから

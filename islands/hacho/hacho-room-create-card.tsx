@@ -17,7 +17,7 @@ export default function HachoRoomCreateCard() {
   async function onClickCreateButton() {
     const response: HachoCreateResponse = await post(`/api/hacho/create`, {
       userName: userName.value,
-      maxRound: maxRound.value,
+      maxRound: maxRound.value.toString(),
       password: password.value.length > 0 ? password.value : undefined,
     } as HachoCreateRequest);
     window.localStorage.setItem("hacho-userId", response.userId);

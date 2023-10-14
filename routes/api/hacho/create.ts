@@ -4,7 +4,7 @@ import { updations } from "../../../src/updations.ts";
 
 export interface HachoCreateRequest {
   userName: string;
-  maxRound: number;
+  maxRound: string;
   password?: string;
 }
 
@@ -24,7 +24,7 @@ export const handler = async (
   const hacho = Hacho.create(
     userId,
     body.userName,
-    body.maxRound,
+    parseInt(body.maxRound),
     body.password,
   );
   const kv = await Deno.openKv();

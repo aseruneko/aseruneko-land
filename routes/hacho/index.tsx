@@ -35,6 +35,13 @@ font-family: 'Roboto Mono', monospace;"
             <li>ホストの人に部屋のURLを教えて貰ってください</li>
           </ul>
         </Card>
+        <Card width={480}>
+          <h2>更新履歴</h2>
+          <dl class="flex flex-wrap py-1.5">
+            <dt class="w-1/4">v1.0.0</dt>
+            <dd class="w-3/4">@2023-10-14 完成</dd>
+          </dl>
+        </Card>
         <a href="https://twitter.com/aseruneko" class="mt-3">@aseruneko</a>
       </div>
     </>

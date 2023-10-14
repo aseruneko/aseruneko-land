@@ -26,6 +26,9 @@ input:focus {
   margin: -2px;
   outline-style: none;
 }
+input:disabled {
+  border: solid 1px #aaaaaa;
+}
 .primary-btn {
   color: #ffffff;
   background-color: #030303;
@@ -35,6 +38,18 @@ input:focus {
 .primary-btn:disabled {
   color: #cccccc;
   background-color: #aaaaaa;
+  cursor: not-allowed;
+}
+.secondory-btn {
+  color: #030303;
+  background-color: #ffffff;
+  border: 1px solid #030303;
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+}
+.secondory-btn:disabled {
+  color: #aaaaaa;
+  background-color: #cccccc;
   cursor: not-allowed;
 }
 a {
