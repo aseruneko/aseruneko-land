@@ -30,19 +30,19 @@ export default function HachoRoomComponent(props: HachoRoomComponentProps) {
       location.href = "/hacho";
     });
     hacho.value = response as Hacho;
-    await checkUpdate();
+    await checkUpdate(new Date().toJSON());
   }
-  async function checkUpdate() {
+  async function checkUpdate(date: string) {
     if (hacho.value?.status != "FINISHED") {
-      const updation = await polling(`../api/updation`, {
+      const updation = await polling(`../api/updation-v2`, {
         id: props.id,
-        updatedAt: new Date().toJSON(),
+        updatedAt: date,
       });
-      if (updation.isUpdated) {
+      if (updation) {
         loadLocalStorage();
         hacho.value = await get(`/api/hacho/hachoes/${props.id}`);
       }
-      await checkUpdate();
+      await checkUpdate(updation.updatedAt);
     }
   }
   function loadLocalStorage() {
