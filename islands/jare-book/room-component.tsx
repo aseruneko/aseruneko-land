@@ -22,7 +22,7 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
     user.value = await verifyUser();
     room.value = await verifyRoom();
     bookRoom.value = await verifyBookRoom();
-    checkUpdate();
+    checkUpdate(new Date().toJSON());
   }
   async function verifyRoom(): Promise<Room> {
     const res = await fetch(`/api/rooms/${data.roomId}`);
@@ -63,17 +63,17 @@ export default function JareBookRoomComponent(data: { roomId: string }) {
       return u;
     }
   }
-  async function checkUpdate() {
+  async function checkUpdate(date: string) {
     if (!(bookRoom.value?.status == "FINISHED")) {
-      const updated = await polling(`/api/updation`, {
+      const updated = await polling(`/api/updation-v2`, {
         id: data.roomId,
-        updatedAt: new Date(),
+        updatedAt: date,
       });
-      if (updated.isUpdated) {
+      if (updated) {
         room.value = await verifyRoom();
         bookRoom.value = await verifyBookRoom();
       }
-      await checkUpdate();
+      await checkUpdate(updated.updatedAt);
     }
   }
   async function onClickStart() {
