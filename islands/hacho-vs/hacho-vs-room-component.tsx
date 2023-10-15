@@ -39,7 +39,7 @@ export default function HachoVSRoomComponent(props: HachoVSRoomComponentProps) {
     await checkUpdate();
   }
   async function checkUpdate() {
-    if (hacho.value?.status != "FINISHED" && userId.value) {
+    if (hacho.value?.status != "FINISHED") {
       const updation = await polling(`../api/updation`, {
         id: props.id,
         updatedAt: new Date().toJSON(),
