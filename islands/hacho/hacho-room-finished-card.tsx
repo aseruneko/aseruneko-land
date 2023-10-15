@@ -53,7 +53,7 @@ export default function HachoRoomFinishedCard(
       </Card>
       <HachoRoomHistoryCard userId={props.userId} hacho={props.hacho} />
       <button
-        class="secondory-btn mt-2"
+        class="secondory-btn my-2"
         disabled={!IS_BROWSER}
         onClick={() => location.href = `/hacho`}
       >

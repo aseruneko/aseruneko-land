@@ -17,4 +17,4 @@ This will watch the project directory and restart as necessary.
 
 ### TODO
 
-hacho作るところから
+hacho作るところから 次へを押しても同期がとれない

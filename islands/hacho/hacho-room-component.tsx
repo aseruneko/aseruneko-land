@@ -7,7 +7,6 @@ import HachoRoomWaitingCard from "./hacho-room-waiting-card.tsx";
 import HachoRoomPlayCard from "./hacho-room-play-card.tsx";
 import HachoRoomInfoCard from "./hacho-room-info-card.tsx";
 import HachoRoomFinishedCard from "./hacho-room-finished-card.tsx";
-import { IS_BROWSER } from "$fresh/runtime.ts";
 import { useEffect } from "preact/hooks";
 
 interface HachoRoomComponentProps {

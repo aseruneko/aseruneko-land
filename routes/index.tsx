@@ -24,6 +24,10 @@ export default function Home() {
                 <a href="/hacho">hacho</a>
               </dt>
               <dd>価値観共有ゲーム</dd>
+              <dt>
+                <a href="/hacho-vs">hacho-vs</a>
+              </dt>
+              <dd>価値観共有ゲーム（対戦）</dd>
             </dl>
           </div>
         </section>

@@ -5,106 +5,146 @@
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/api/delete-all.ts";
-import * as $3 from "./routes/api/hacho/create.ts";
-import * as $4 from "./routes/api/hacho/hachoes/[id].ts";
-import * as $5 from "./routes/api/hacho/hachoes/[id]/guess.ts";
-import * as $6 from "./routes/api/hacho/hachoes/[id]/join.ts";
-import * as $7 from "./routes/api/hacho/hachoes/[id]/next.ts";
-import * as $8 from "./routes/api/hacho/hachoes/[id]/pick.ts";
-import * as $9 from "./routes/api/hacho/hachoes/[id]/start.ts";
-import * as $10 from "./routes/api/hacho/hachoes/[id]/submit.ts";
-import * as $11 from "./routes/api/jare-book/books.ts";
-import * as $12 from "./routes/api/jare-book/create/room.ts";
-import * as $13 from "./routes/api/jare-book/jare-book-rooms/[id].ts";
-import * as $14 from "./routes/api/jare-book/jare-book-rooms/[id]/edit-page.ts";
-import * as $15 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-id.ts";
-import * as $16 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.ts";
-import * as $17 from "./routes/api/jare-book/jare-book-rooms/[id]/start.ts";
-import * as $18 from "./routes/api/jare-book/jare-book-rooms/[id]/title.ts";
-import * as $19 from "./routes/api/list-all.ts";
-import * as $20 from "./routes/api/random-words.ts";
-import * as $21 from "./routes/api/rooms/[id].ts";
-import * as $22 from "./routes/api/updation.ts";
-import * as $23 from "./routes/greet/[name].tsx";
-import * as $24 from "./routes/hacho/[id].tsx";
-import * as $25 from "./routes/hacho/index.tsx";
-import * as $26 from "./routes/index.tsx";
-import * as $27 from "./routes/jare-book/index.tsx";
-import * as $28 from "./routes/jare-book/rooms/[id].tsx";
-import * as $29 from "./routes/jare-book/rooms/index.tsx";
-import * as $$0 from "./islands/hacho/hacho-room-component.tsx";
-import * as $$1 from "./islands/hacho/hacho-room-create-card.tsx";
-import * as $$2 from "./islands/hacho/hacho-room-finished-card.tsx";
-import * as $$3 from "./islands/hacho/hacho-room-guesser-card.tsx";
-import * as $$4 from "./islands/hacho/hacho-room-history-card.tsx";
-import * as $$5 from "./islands/hacho/hacho-room-info-card.tsx";
-import * as $$6 from "./islands/hacho/hacho-room-join-card.tsx";
-import * as $$7 from "./islands/hacho/hacho-room-picker-card.tsx";
-import * as $$8 from "./islands/hacho/hacho-room-play-card.tsx";
-import * as $$9 from "./islands/hacho/hacho-room-waiting-card.tsx";
-import * as $$10 from "./islands/jare-book/all-books-view-card.tsx";
-import * as $$11 from "./islands/jare-book/book-view-card.tsx";
-import * as $$12 from "./islands/jare-book/books-view-card.tsx";
-import * as $$13 from "./islands/jare-book/name-change-card.tsx";
-import * as $$14 from "./islands/jare-book/page-edit-card.tsx";
-import * as $$15 from "./islands/jare-book/page-view-card.tsx";
-import * as $$16 from "./islands/jare-book/room-component.tsx";
-import * as $$17 from "./islands/jare-book/room-create-card.tsx";
-import * as $$18 from "./islands/jare-book/title-create-card.tsx";
+import * as $3 from "./routes/api/hacho-vs/create.ts";
+import * as $4 from "./routes/api/hacho-vs/hacho-vses/[id].ts";
+import * as $5 from "./routes/api/hacho-vs/hacho-vses/[id]/guess.ts";
+import * as $6 from "./routes/api/hacho-vs/hacho-vses/[id]/join.ts";
+import * as $7 from "./routes/api/hacho-vs/hacho-vses/[id]/next.ts";
+import * as $8 from "./routes/api/hacho-vs/hacho-vses/[id]/pick.ts";
+import * as $9 from "./routes/api/hacho-vs/hacho-vses/[id]/start.ts";
+import * as $10 from "./routes/api/hacho/create.ts";
+import * as $11 from "./routes/api/hacho/hachoes/[id].ts";
+import * as $12 from "./routes/api/hacho/hachoes/[id]/guess.ts";
+import * as $13 from "./routes/api/hacho/hachoes/[id]/join.ts";
+import * as $14 from "./routes/api/hacho/hachoes/[id]/next.ts";
+import * as $15 from "./routes/api/hacho/hachoes/[id]/pick.ts";
+import * as $16 from "./routes/api/hacho/hachoes/[id]/start.ts";
+import * as $17 from "./routes/api/hacho/hachoes/[id]/submit.ts";
+import * as $18 from "./routes/api/jare-book/books.ts";
+import * as $19 from "./routes/api/jare-book/create/room.ts";
+import * as $20 from "./routes/api/jare-book/jare-book-rooms/[id].ts";
+import * as $21 from "./routes/api/jare-book/jare-book-rooms/[id]/edit-page.ts";
+import * as $22 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-id.ts";
+import * as $23 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.ts";
+import * as $24 from "./routes/api/jare-book/jare-book-rooms/[id]/start.ts";
+import * as $25 from "./routes/api/jare-book/jare-book-rooms/[id]/title.ts";
+import * as $26 from "./routes/api/list-all.ts";
+import * as $27 from "./routes/api/random-words.ts";
+import * as $28 from "./routes/api/rooms/[id].ts";
+import * as $29 from "./routes/api/updation.ts";
+import * as $30 from "./routes/greet/[name].tsx";
+import * as $31 from "./routes/hacho-vs/[id].tsx";
+import * as $32 from "./routes/hacho-vs/index.tsx";
+import * as $33 from "./routes/hacho/[id].tsx";
+import * as $34 from "./routes/hacho/index.tsx";
+import * as $35 from "./routes/index.tsx";
+import * as $36 from "./routes/jare-book/index.tsx";
+import * as $37 from "./routes/jare-book/rooms/[id].tsx";
+import * as $38 from "./routes/jare-book/rooms/index.tsx";
+import * as $$0 from "./islands/hacho-vs/hacho-vs-room-component.tsx";
+import * as $$1 from "./islands/hacho-vs/hacho-vs-room-create-card.tsx";
+import * as $$2 from "./islands/hacho-vs/hacho-vs-room-finished-card.tsx";
+import * as $$3 from "./islands/hacho-vs/hacho-vs-room-guesser-card.tsx";
+import * as $$4 from "./islands/hacho-vs/hacho-vs-room-history-card.tsx";
+import * as $$5 from "./islands/hacho-vs/hacho-vs-room-info-card.tsx";
+import * as $$6 from "./islands/hacho-vs/hacho-vs-room-interval-component.tsx";
+import * as $$7 from "./islands/hacho-vs/hacho-vs-room-join-card.tsx";
+import * as $$8 from "./islands/hacho-vs/hacho-vs-room-picker-card.tsx";
+import * as $$9 from "./islands/hacho-vs/hacho-vs-room-play-card.tsx";
+import * as $$10 from "./islands/hacho-vs/hacho-vs-room-waiting-card.tsx";
+import * as $$11 from "./islands/hacho/hacho-room-component.tsx";
+import * as $$12 from "./islands/hacho/hacho-room-create-card.tsx";
+import * as $$13 from "./islands/hacho/hacho-room-finished-card.tsx";
+import * as $$14 from "./islands/hacho/hacho-room-guesser-card.tsx";
+import * as $$15 from "./islands/hacho/hacho-room-history-card.tsx";
+import * as $$16 from "./islands/hacho/hacho-room-info-card.tsx";
+import * as $$17 from "./islands/hacho/hacho-room-join-card.tsx";
+import * as $$18 from "./islands/hacho/hacho-room-picker-card.tsx";
+import * as $$19 from "./islands/hacho/hacho-room-play-card.tsx";
+import * as $$20 from "./islands/hacho/hacho-room-waiting-card.tsx";
+import * as $$21 from "./islands/jare-book/all-books-view-card.tsx";
+import * as $$22 from "./islands/jare-book/book-view-card.tsx";
+import * as $$23 from "./islands/jare-book/books-view-card.tsx";
+import * as $$24 from "./islands/jare-book/name-change-card.tsx";
+import * as $$25 from "./islands/jare-book/page-edit-card.tsx";
+import * as $$26 from "./islands/jare-book/page-view-card.tsx";
+import * as $$27 from "./islands/jare-book/room-component.tsx";
+import * as $$28 from "./islands/jare-book/room-create-card.tsx";
+import * as $$29 from "./islands/jare-book/title-create-card.tsx";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
     "./routes/_app.tsx": $1,
     "./routes/api/delete-all.ts": $2,
-    "./routes/api/hacho/create.ts": $3,
-    "./routes/api/hacho/hachoes/[id].ts": $4,
-    "./routes/api/hacho/hachoes/[id]/guess.ts": $5,
-    "./routes/api/hacho/hachoes/[id]/join.ts": $6,
-    "./routes/api/hacho/hachoes/[id]/next.ts": $7,
-    "./routes/api/hacho/hachoes/[id]/pick.ts": $8,
-    "./routes/api/hacho/hachoes/[id]/start.ts": $9,
-    "./routes/api/hacho/hachoes/[id]/submit.ts": $10,
-    "./routes/api/jare-book/books.ts": $11,
-    "./routes/api/jare-book/create/room.ts": $12,
-    "./routes/api/jare-book/jare-book-rooms/[id].ts": $13,
-    "./routes/api/jare-book/jare-book-rooms/[id]/edit-page.ts": $14,
-    "./routes/api/jare-book/jare-book-rooms/[id]/join-by-id.ts": $15,
-    "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.ts": $16,
-    "./routes/api/jare-book/jare-book-rooms/[id]/start.ts": $17,
-    "./routes/api/jare-book/jare-book-rooms/[id]/title.ts": $18,
-    "./routes/api/list-all.ts": $19,
-    "./routes/api/random-words.ts": $20,
-    "./routes/api/rooms/[id].ts": $21,
-    "./routes/api/updation.ts": $22,
-    "./routes/greet/[name].tsx": $23,
-    "./routes/hacho/[id].tsx": $24,
-    "./routes/hacho/index.tsx": $25,
-    "./routes/index.tsx": $26,
-    "./routes/jare-book/index.tsx": $27,
-    "./routes/jare-book/rooms/[id].tsx": $28,
-    "./routes/jare-book/rooms/index.tsx": $29,
+    "./routes/api/hacho-vs/create.ts": $3,
+    "./routes/api/hacho-vs/hacho-vses/[id].ts": $4,
+    "./routes/api/hacho-vs/hacho-vses/[id]/guess.ts": $5,
+    "./routes/api/hacho-vs/hacho-vses/[id]/join.ts": $6,
+    "./routes/api/hacho-vs/hacho-vses/[id]/next.ts": $7,
+    "./routes/api/hacho-vs/hacho-vses/[id]/pick.ts": $8,
+    "./routes/api/hacho-vs/hacho-vses/[id]/start.ts": $9,
+    "./routes/api/hacho/create.ts": $10,
+    "./routes/api/hacho/hachoes/[id].ts": $11,
+    "./routes/api/hacho/hachoes/[id]/guess.ts": $12,
+    "./routes/api/hacho/hachoes/[id]/join.ts": $13,
+    "./routes/api/hacho/hachoes/[id]/next.ts": $14,
+    "./routes/api/hacho/hachoes/[id]/pick.ts": $15,
+    "./routes/api/hacho/hachoes/[id]/start.ts": $16,
+    "./routes/api/hacho/hachoes/[id]/submit.ts": $17,
+    "./routes/api/jare-book/books.ts": $18,
+    "./routes/api/jare-book/create/room.ts": $19,
+    "./routes/api/jare-book/jare-book-rooms/[id].ts": $20,
+    "./routes/api/jare-book/jare-book-rooms/[id]/edit-page.ts": $21,
+    "./routes/api/jare-book/jare-book-rooms/[id]/join-by-id.ts": $22,
+    "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.ts": $23,
+    "./routes/api/jare-book/jare-book-rooms/[id]/start.ts": $24,
+    "./routes/api/jare-book/jare-book-rooms/[id]/title.ts": $25,
+    "./routes/api/list-all.ts": $26,
+    "./routes/api/random-words.ts": $27,
+    "./routes/api/rooms/[id].ts": $28,
+    "./routes/api/updation.ts": $29,
+    "./routes/greet/[name].tsx": $30,
+    "./routes/hacho-vs/[id].tsx": $31,
+    "./routes/hacho-vs/index.tsx": $32,
+    "./routes/hacho/[id].tsx": $33,
+    "./routes/hacho/index.tsx": $34,
+    "./routes/index.tsx": $35,
+    "./routes/jare-book/index.tsx": $36,
+    "./routes/jare-book/rooms/[id].tsx": $37,
+    "./routes/jare-book/rooms/index.tsx": $38,
   },
   islands: {
-    "./islands/hacho/hacho-room-component.tsx": $$0,
-    "./islands/hacho/hacho-room-create-card.tsx": $$1,
-    "./islands/hacho/hacho-room-finished-card.tsx": $$2,
-    "./islands/hacho/hacho-room-guesser-card.tsx": $$3,
-    "./islands/hacho/hacho-room-history-card.tsx": $$4,
-    "./islands/hacho/hacho-room-info-card.tsx": $$5,
-    "./islands/hacho/hacho-room-join-card.tsx": $$6,
-    "./islands/hacho/hacho-room-picker-card.tsx": $$7,
-    "./islands/hacho/hacho-room-play-card.tsx": $$8,
-    "./islands/hacho/hacho-room-waiting-card.tsx": $$9,
-    "./islands/jare-book/all-books-view-card.tsx": $$10,
-    "./islands/jare-book/book-view-card.tsx": $$11,
-    "./islands/jare-book/books-view-card.tsx": $$12,
-    "./islands/jare-book/name-change-card.tsx": $$13,
-    "./islands/jare-book/page-edit-card.tsx": $$14,
-    "./islands/jare-book/page-view-card.tsx": $$15,
-    "./islands/jare-book/room-component.tsx": $$16,
-    "./islands/jare-book/room-create-card.tsx": $$17,
-    "./islands/jare-book/title-create-card.tsx": $$18,
+    "./islands/hacho-vs/hacho-vs-room-component.tsx": $$0,
+    "./islands/hacho-vs/hacho-vs-room-create-card.tsx": $$1,
+    "./islands/hacho-vs/hacho-vs-room-finished-card.tsx": $$2,
+    "./islands/hacho-vs/hacho-vs-room-guesser-card.tsx": $$3,
+    "./islands/hacho-vs/hacho-vs-room-history-card.tsx": $$4,
+    "./islands/hacho-vs/hacho-vs-room-info-card.tsx": $$5,
+    "./islands/hacho-vs/hacho-vs-room-interval-component.tsx": $$6,
+    "./islands/hacho-vs/hacho-vs-room-join-card.tsx": $$7,
+    "./islands/hacho-vs/hacho-vs-room-picker-card.tsx": $$8,
+    "./islands/hacho-vs/hacho-vs-room-play-card.tsx": $$9,
+    "./islands/hacho-vs/hacho-vs-room-waiting-card.tsx": $$10,
+    "./islands/hacho/hacho-room-component.tsx": $$11,
+    "./islands/hacho/hacho-room-create-card.tsx": $$12,
+    "./islands/hacho/hacho-room-finished-card.tsx": $$13,
+    "./islands/hacho/hacho-room-guesser-card.tsx": $$14,
+    "./islands/hacho/hacho-room-history-card.tsx": $$15,
+    "./islands/hacho/hacho-room-info-card.tsx": $$16,
+    "./islands/hacho/hacho-room-join-card.tsx": $$17,
+    "./islands/hacho/hacho-room-picker-card.tsx": $$18,
+    "./islands/hacho/hacho-room-play-card.tsx": $$19,
+    "./islands/hacho/hacho-room-waiting-card.tsx": $$20,
+    "./islands/jare-book/all-books-view-card.tsx": $$21,
+    "./islands/jare-book/book-view-card.tsx": $$22,
+    "./islands/jare-book/books-view-card.tsx": $$23,
+    "./islands/jare-book/name-change-card.tsx": $$24,
+    "./islands/jare-book/page-edit-card.tsx": $$25,
+    "./islands/jare-book/page-view-card.tsx": $$26,
+    "./islands/jare-book/room-component.tsx": $$27,
+    "./islands/jare-book/room-create-card.tsx": $$28,
+    "./islands/jare-book/title-create-card.tsx": $$29,
   },
   baseUrl: import.meta.url,
 };
