@@ -15,8 +15,13 @@ export const handler = async (
     updations[body.id] = body.updatedAt;
   }
   const updatedAt = body.updatedAt;
-  while (updations[body.id] === updatedAt) {
+  while (checkUpdate(body.id, updatedAt)) {
     await new Promise((r) => setTimeout(r, 50));
   }
   return Response.json({ updatedAt: updations[body.id] });
 };
+
+function checkUpdate(id: string, updatedAt: string): boolean {
+  const up = updations[id];
+  return up == updatedAt;
+}
