@@ -67,7 +67,7 @@ export default function HachoVSRoomComponent(props: HachoVSRoomComponentProps) {
   return (
     <>
       {(hacho.value && !isMember.value)
-        ? <HachoVSRoomJoinCard roomId={props.id} />
+        ? <HachoVSRoomJoinCard roomId={props.id} userId={userId} />
         : ""}
       {isMember.value && userId.value
         ? (

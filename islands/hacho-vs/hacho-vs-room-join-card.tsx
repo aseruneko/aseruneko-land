@@ -1,9 +1,11 @@
 import { IS_BROWSER } from "$fresh/runtime.ts";
-import { useComputed, useSignal } from "@preact/signals";
+import { Signal, useComputed, useSignal } from "@preact/signals";
 import { Card } from "../../components/shared/Card.tsx";
 import { post } from "../../src/post.ts";
 
-export default function HachoVSRoomJoinCard(props: { roomId: string }) {
+export default function HachoVSRoomJoinCard(
+  props: { roomId: string; userId: Signal<string | undefined> },
+) {
   const userName = useSignal("");
   const password = useSignal("");
   const submitting = useSignal(false);
@@ -23,6 +25,7 @@ export default function HachoVSRoomJoinCard(props: { roomId: string }) {
         if (password.value.length > 0) {
           window.localStorage.setItem("hacho-vs-password", password.value);
         }
+        props.userId.value = res.userId;
       } else {
         submitting.value = false;
         joinFailed.value = true;
