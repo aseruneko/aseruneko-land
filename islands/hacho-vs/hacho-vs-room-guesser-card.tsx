@@ -27,7 +27,7 @@ export default function HachoVSRoomGuesserCard(props: HachoVSRoomGuesserCard) {
     submitted.value = false;
   }
   props.hacho.subscribe(() => {
-    submitted.value = true;
+    submitted.value = false;
   });
   return (
     <>
