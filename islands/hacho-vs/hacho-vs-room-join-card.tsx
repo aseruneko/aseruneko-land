@@ -18,7 +18,6 @@ export default function HachoVSRoomJoinCard(props: { roomId: string }) {
       password: password.value.length > 0 ? password.value : undefined,
     }).then((res) => {
       if (res.joined) {
-        submitting.value = false;
         window.localStorage.setItem("hacho-vs-userId", res.userId);
         window.localStorage.setItem("hacho-vs-userName", userName.value);
         if (password.value.length > 0) {
