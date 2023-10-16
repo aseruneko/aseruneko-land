@@ -39,8 +39,9 @@ export default function HachoVSRoomGuesserCard(props: HachoVSRoomGuesserCard) {
                 </span>です
               </p>
             )}
-          {props.hacho.value?.status != "INTERVAL"
-            ? (
+          {props.hacho.value?.status == "INTERVAL"
+            ? ""
+            : (
               <div class="flex flex-row items-center my-1.5 gap-1.5">
                 {round.value?.minLabel}
                 <input
@@ -59,8 +60,7 @@ export default function HachoVSRoomGuesserCard(props: HachoVSRoomGuesserCard) {
                 </input>
                 {round.value?.maxLabel}
               </div>
-            )
-            : ""}
+            )}
           {round.value?.picked && props.hacho.value?.status != "INTERVAL"
             ? (
               <button
