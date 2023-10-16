@@ -24,7 +24,11 @@ export default function HachoVSRoomGuesserCard(props: HachoVSRoomGuesserCard) {
       userId: props.userId,
       guess: guess.value,
     });
+    submitted.value = false;
   }
+  props.hacho.subscribe(() => {
+    submitted.value = true;
+  });
   return (
     <>
       <Card width={512}>
