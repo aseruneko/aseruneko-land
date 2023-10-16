@@ -16,12 +16,11 @@ export const handler = async (
   }
   const updatedAt = body.updatedAt;
   while (checkUpdate(body.id, updatedAt)) {
-    await new Promise((r) => setTimeout(r, 50));
+    await new Promise((r) => setTimeout(r, 100));
   }
   return Response.json({ updatedAt: updations[body.id] });
 };
 
 function checkUpdate(id: string, updatedAt: string): boolean {
-  const up = updations[id];
-  return up == updatedAt;
+  return { ...updations }[id] == updatedAt;
 }
