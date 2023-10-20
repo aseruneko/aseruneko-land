@@ -56,3 +56,12 @@ a {
   text-decoration: underline;
   color: #8bb4f6;
 }
+a.button-like {
+  text-decoration: none;
+  color: #030303;
+  background-color: #ffffff;
+  border: 1px solid #030303;
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+  display: inline-block;
+}

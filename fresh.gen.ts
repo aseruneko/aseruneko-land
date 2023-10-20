@@ -29,19 +29,21 @@ import * as $23 from "./routes/api/jare-book/jare-book-rooms/[id]/join-by-name.t
 import * as $24 from "./routes/api/jare-book/jare-book-rooms/[id]/start.ts";
 import * as $25 from "./routes/api/jare-book/jare-book-rooms/[id]/title.ts";
 import * as $26 from "./routes/api/list-all.ts";
-import * as $27 from "./routes/api/random-words.ts";
-import * as $28 from "./routes/api/rooms/[id].ts";
-import * as $29 from "./routes/api/updation-v2.ts";
-import * as $30 from "./routes/api/updation.ts";
-import * as $31 from "./routes/greet/[name].tsx";
-import * as $32 from "./routes/hacho-vs/[id].tsx";
-import * as $33 from "./routes/hacho-vs/index.tsx";
-import * as $34 from "./routes/hacho/[id].tsx";
-import * as $35 from "./routes/hacho/index.tsx";
-import * as $36 from "./routes/index.tsx";
-import * as $37 from "./routes/jare-book/index.tsx";
-import * as $38 from "./routes/jare-book/rooms/[id].tsx";
-import * as $39 from "./routes/jare-book/rooms/index.tsx";
+import * as $27 from "./routes/api/randamaiza/index.ts";
+import * as $28 from "./routes/api/random-words.ts";
+import * as $29 from "./routes/api/rooms/[id].ts";
+import * as $30 from "./routes/api/updation-v2.ts";
+import * as $31 from "./routes/api/updation.ts";
+import * as $32 from "./routes/greet/[name].tsx";
+import * as $33 from "./routes/hacho-vs/[id].tsx";
+import * as $34 from "./routes/hacho-vs/index.tsx";
+import * as $35 from "./routes/hacho/[id].tsx";
+import * as $36 from "./routes/hacho/index.tsx";
+import * as $37 from "./routes/index.tsx";
+import * as $38 from "./routes/jare-book/index.tsx";
+import * as $39 from "./routes/jare-book/rooms/[id].tsx";
+import * as $40 from "./routes/jare-book/rooms/index.tsx";
+import * as $41 from "./routes/randamaiza/index.tsx";
 import * as $$0 from "./islands/hacho-vs/hacho-vs-room-component.tsx";
 import * as $$1 from "./islands/hacho-vs/hacho-vs-room-create-card.tsx";
 import * as $$2 from "./islands/hacho-vs/hacho-vs-room-finished-card.tsx";
@@ -72,6 +74,7 @@ import * as $$26 from "./islands/jare-book/page-view-card.tsx";
 import * as $$27 from "./islands/jare-book/room-component.tsx";
 import * as $$28 from "./islands/jare-book/room-create-card.tsx";
 import * as $$29 from "./islands/jare-book/title-create-card.tsx";
+import * as $$30 from "./islands/randamaiza/randamaiza-card.tsx";
 
 const manifest = {
   routes: {
@@ -102,19 +105,21 @@ const manifest = {
     "./routes/api/jare-book/jare-book-rooms/[id]/start.ts": $24,
     "./routes/api/jare-book/jare-book-rooms/[id]/title.ts": $25,
     "./routes/api/list-all.ts": $26,
-    "./routes/api/random-words.ts": $27,
-    "./routes/api/rooms/[id].ts": $28,
-    "./routes/api/updation-v2.ts": $29,
-    "./routes/api/updation.ts": $30,
-    "./routes/greet/[name].tsx": $31,
-    "./routes/hacho-vs/[id].tsx": $32,
-    "./routes/hacho-vs/index.tsx": $33,
-    "./routes/hacho/[id].tsx": $34,
-    "./routes/hacho/index.tsx": $35,
-    "./routes/index.tsx": $36,
-    "./routes/jare-book/index.tsx": $37,
-    "./routes/jare-book/rooms/[id].tsx": $38,
-    "./routes/jare-book/rooms/index.tsx": $39,
+    "./routes/api/randamaiza/index.ts": $27,
+    "./routes/api/random-words.ts": $28,
+    "./routes/api/rooms/[id].ts": $29,
+    "./routes/api/updation-v2.ts": $30,
+    "./routes/api/updation.ts": $31,
+    "./routes/greet/[name].tsx": $32,
+    "./routes/hacho-vs/[id].tsx": $33,
+    "./routes/hacho-vs/index.tsx": $34,
+    "./routes/hacho/[id].tsx": $35,
+    "./routes/hacho/index.tsx": $36,
+    "./routes/index.tsx": $37,
+    "./routes/jare-book/index.tsx": $38,
+    "./routes/jare-book/rooms/[id].tsx": $39,
+    "./routes/jare-book/rooms/index.tsx": $40,
+    "./routes/randamaiza/index.tsx": $41,
   },
   islands: {
     "./islands/hacho-vs/hacho-vs-room-component.tsx": $$0,
@@ -147,6 +152,7 @@ const manifest = {
     "./islands/jare-book/room-component.tsx": $$27,
     "./islands/jare-book/room-create-card.tsx": $$28,
     "./islands/jare-book/title-create-card.tsx": $$29,
+    "./islands/randamaiza/randamaiza-card.tsx": $$30,
   },
   baseUrl: import.meta.url,
 };

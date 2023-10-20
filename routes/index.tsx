@@ -28,6 +28,10 @@ export default function Home() {
                 <a href="/hacho-vs">hacho-vs</a>
               </dt>
               <dd>価値観共有ゲーム（対戦）</dd>
+              <dt>
+                <a href="/randamaiza">randamaiza</a>
+              </dt>
+              <dd>カタカナ語ランダマイザ</dd>
             </dl>
           </div>
         </section>

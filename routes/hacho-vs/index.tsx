@@ -42,7 +42,8 @@ export default function HachoVSIndexPage() {
             <dd class="w-3/4">@2023-10-15 完成</dd>
           </dl>
         </Card>
-        <a href="https://twitter.com/aseruneko" class="mt-3">@aseruneko</a>
+        <a href="../" class="button-like mt-2">戻る</a>
+        <a href="https://twitter.com/aseruneko" class="my-3">@aseruneko</a>
       </div>
     </>
   );
