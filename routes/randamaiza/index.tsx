@@ -18,13 +18,15 @@ export default function RandamaizaPage() {
         <h1 class="text-6xl my-4" style="font-family: 'Zen Maru Gothic'">
           RANDAMAIZA
         </h1>
-        <p>ランダムな外来語(510語くらい)を表示します</p>
+        <p>ランダムな外来語(700語くらい)を表示します</p>
         <RandamaizaCard />
         <Card width={480}>
           <h2>更新履歴</h2>
           <dl class="flex flex-wrap py-1.5">
+            <dt class="w-1/4">v1.0.2</dt>
+            <dd class="w-3/4">@2023-10-20 単語を追加</dd>
             <dt class="w-1/4">v1.0.1</dt>
-            <dd class="w-3/4">@2023-10-20 追加</dd>
+            <dd class="w-3/4">@2023-10-20 単語を追加</dd>
             <dt class="w-1/4">v1.0.0</dt>
             <dd class="w-3/4">@2023-10-20 完成</dd>
           </dl>
